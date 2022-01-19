@@ -1,0 +1,26 @@
+<div class="card my-5">
+  <div class="card-body">
+    <table class="table table-bordered table-striped">
+      <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Requerente</th>
+        <th scope="col">CPF</th>
+        <th scope="col">Valor Empréstimo</th>
+        <th scope="col">Situação</th>
+        <th scope="col">Juros</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let pedido of pedidos">
+        <td>{{ pedido.id }}</td>
+        <td>{{ pedido.requerente.nome }}</td>
+        <td>{{ pedido.requerente.cpf }}</td>
+        <td>{{ pedido.valorRequerido }}</td>
+        <td>{{ pedido.situacao }}</td>
+        <td>R$ {{ pedido.valorJuros }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
